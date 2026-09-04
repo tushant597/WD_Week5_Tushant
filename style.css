@@ -1,0 +1,247 @@
+:root{
+    --primary-color: #fafafa;
+    --secondary-color: #f2780d;
+    --text-color: #333;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    min-height:100vh;
+}
+
+/* header */
+
+header{
+    background-color: var(--secondary-color);
+}
+
+header h1{
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-color);
+}
+header p{
+    text-align: center;
+    padding-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* container */
+
+#container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* input section */
+#task-input{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+/* form  */
+#taskForm{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+/* for groups in form */
+#taskGroup{
+    display: flex;
+    flex-direction: column;
+
+    width:80%;
+}
+
+#categoryGroup{
+    display: flex;
+    flex-direction: column;
+}
+
+/* task input field */
+#taskInput{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--secondary-color);
+    margin-bottom: 2px;
+    margin-top: 1rem;
+}
+/* dropdown */
+#taskCategory{
+    margin-top: 1rem;
+}
+
+/* add button */
+#addTaskButton{
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 0.7rem 0.9rem;
+    border-radius: 5px;
+    color: var(--primary-color);
+    
+}
+#addTaskButton:hover{
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+#addTaskButton:active{
+    transform: translateY(2px);
+}
+
+/* for all dropdown */
+select {
+  width: 100%;
+  min-width: 1ch;
+  max-width: 16ch;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: var(--primary-color);
+}
+
+/* task count section */
+#details{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#details h2{
+    margin-bottom: 1rem;
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card{
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* search section */
+#searchFilter{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+#searchInput{
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--secondary-color);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* task list */
+#taskListSection{
+     background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.task-item{
+    background-color: var(--primary-color);
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 15px;
+
+    box-shadow: 0 0 5px var(--secondary-color);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.task-item:hover{
+    transform: translateY(-2px);
+}
+
+.task-item h3{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-bottom:2px dotted var(--secondary-color);
+    border-radius: 10px;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.task-item p{
+    margin-bottom: 0.3rem;
+    margin-left: 0.5rem;
+}
+
+.complete-button{
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.complete-button:hover{
+    transform: translateY(-2px);
+}
+.complete-button:active{
+    transform: translateY(2px);
+}
+
+.delete-button{
+    background-color: #FAA0A0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover{
+    transform: translateY(-2px);
+    background-color: red;
+}
+.delete-button:active{
+    transform: translateY(2px);
+}
+
+#emptyMessage {
+    margin-top: 1rem;
+    text-align: center;
+    color: #777;
+}

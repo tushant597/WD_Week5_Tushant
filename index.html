@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Task Manager</h1>
+        <p>Organize your tasks and stay productive.</p>
+    </header>
+
+    <main id="container">
+
+        <section id="task-input">
+            <h2>Add New Task</h2>
+            <div id="taskFormContainer">
+
+                <form id="taskForm">
+                    <div id="taskGroup">
+                        <label for="taskInput">Task:</label>
+                        <input type="text" id="taskInput" placeholder="Enter a new task">
+                    </div>
+
+                    <div id="categoryGroup">
+                        <label for="taskCategory">Category:</label>
+                        <select name="taskCategory" id="taskCategory">
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="study">Study</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="addTaskButton">Add Task</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="details">
+            <h2>Task Details</h2>
+            <div id="cards">
+
+                <div class="card">
+                    <h3>Total Tasks</h3>
+                    <p id="totalTasks">0</p>
+                </div>
+                <div class="card">
+                    <h3>Pending Tasks</h3>
+                    <p id="pendingTasks">0</p>
+                </div>
+                <div class="card">
+                    <h3>Completed Tasks</h3>
+                    <p id="completedTasks">0</p>
+                </div>
+            </div>
+
+        </section>  
+
+        <section id="searchFilter">
+            <h2>Search and Filter Tasks</h2>
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <label for="categoryFilter">Filter by Category:</label>
+            <select name="categoryFilter" id="categoryFilter">
+                <option value="all">All</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+            </select>
+        </section>
+
+        <section id="taskListSection">
+            <h2>My Tasks</h2>
+            <div id="taskList"></div>
+            <div id="emptyMessage">No tasks to display.</div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
